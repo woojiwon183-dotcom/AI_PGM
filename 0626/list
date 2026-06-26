@@ -1,0 +1,305 @@
+frutis = []
+frutis = input("enter a fruit:")
+frutis.append(fruit)
+frutis = input("enter a fruit:")
+frutis.append(fruit)
+frutis = input("enter a fruit:")
+frutis.append(fruit)
+frutis = input("enter a fruit:")
+frutis.append(fruit)
+frutis = input("enter a fruit:")
+frutis.append(fruit)
+frutis = ["apple", "banana", "orange"]
+print(frutis)
+print(frutis[0])
+print(fruits[-1])
+Python 리스트(List)
+1. 리스트란?
+
+리스트(List)는 여러 개의 데이터를 하나의 변수에 저장하는 자료형이다.
+
+예를 들어 과일 5개를 저장하려면
+
+리스트를 사용하지 않으면
+fruit1 = "apple"
+fruit2 = "banana"
+fruit3 = "orange"
+fruit4 = "melon"
+fruit5 = "grape"
+
+변수가 너무 많아진다.
+
+리스트를 사용하면
+fruits = ["apple", "banana", "orange", "melon", "grape"]
+
+하나의 변수에 저장된다.
+
+2. 리스트 생성
+문자열 리스트
+fruits = ["apple", "banana", "orange"]
+숫자 리스트
+numbers = [10, 20, 30, 40, 50]
+실수 리스트
+score = [88.5, 95.2, 74.8]
+빈 리스트
+fruits = []
+
+또는
+
+fruits = list()
+3. 인덱스(Index)
+
+리스트는 0부터 시작한다.
+
+fruits = ["apple", "banana", "orange"]
+번호(Index)	값
+0	apple
+1	banana
+2	orange
+
+첫 번째 값
+
+print(fruits[0])
+
+출력
+
+apple
+
+두 번째 값
+
+print(fruits[1])
+banana
+
+마지막 값
+
+print(fruits[-1])
+orange
+4. 리스트 값 변경
+fruits = ["apple", "banana", "orange"]
+
+fruits[1] = "melon"
+
+print(fruits)
+
+결과
+
+['apple', 'melon', 'orange']
+5. append()
+
+맨 뒤에 추가
+
+fruits = []
+
+fruits.append("apple")
+fruits.append("banana")
+fruits.append("orange")
+
+print(fruits)
+
+결과
+
+['apple', 'banana', 'orange']
+
+입력과 함께 사용
+
+fruits = []
+
+fruit = input("과일 입력 : ")
+fruits.append(fruit)
+6. insert()
+
+원하는 위치에 삽입
+
+fruits = ["apple", "banana"]
+
+fruits.insert(1, "melon")
+
+print(fruits)
+
+결과
+
+['apple', 'melon', 'banana']
+7. remove()
+
+값 삭제
+
+fruits = ["apple", "banana", "orange"]
+
+fruits.remove("banana")
+
+print(fruits)
+
+결과
+
+['apple', 'orange']
+8. pop()
+
+인덱스로 삭제
+
+fruits = ["apple", "banana", "orange"]
+
+fruits.pop(1)
+
+print(fruits)
+
+결과
+
+['apple', 'orange']
+9. len()
+
+리스트 길이
+
+fruits = ["apple", "banana", "orange"]
+
+print(len(fruits))
+
+출력
+
+3
+10. 정렬
+
+오름차순
+
+numbers = [30, 10, 50, 20]
+
+numbers.sort()
+
+print(numbers)
+
+결과
+
+[10, 20, 30, 50]
+
+내림차순
+
+numbers.sort(reverse=True)
+
+print(numbers)
+[50, 30, 20, 10]
+11. 반복문과 리스트
+fruits = ["apple", "banana", "orange"]
+
+for fruit in fruits:
+    print(fruit)
+
+출력
+
+apple
+banana
+orange
+
+인덱스 출력
+
+for i in range(len(fruits)):
+    print(i, fruits[i])
+
+결과
+
+0 apple
+1 banana
+2 orange
+12. 사용자 입력받기
+fruits = []
+
+for i in range(5):
+    fruit = input("과일 입력 : ")
+    fruits.append(fruit)
+
+print(fruits)
+
+예
+
+apple
+banana
+orange
+melon
+grape
+
+결과
+
+['apple', 'banana', 'orange', 'melon', 'grape']
+13. 리스트 함수
+함수	설명
+append()	맨 뒤 추가
+insert()	원하는 위치 삽입
+remove()	값 삭제
+pop()	인덱스로 삭제
+sort()	오름차순 정렬
+sort(reverse=True)	내림차순 정렬
+reverse()	순서 뒤집기
+clear()	모두 삭제
+len()	개수
+max()	최댓값
+min()	최솟값
+sum()	합계
+
+예
+
+numbers = [10, 20, 30, 40, 50]
+
+print(sum(numbers))
+print(max(numbers))
+print(min(numbers))
+print(len(numbers))
+
+결과
+
+150
+50
+10
+5
+14. 많이 나오는 시험 문제
+문제 1
+
+5개의 정수를 입력받아 리스트에 저장 후
+
+합
+평균
+최대값
+최소값
+
+출력
+
+문제 2
+
+과일 5개 입력받아
+
+첫 번째 과일
+
+마지막 과일
+
+출력
+
+문제 3
+
+짝수만 출력
+
+numbers = [3, 6, 8, 9, 10]
+
+for num in numbers:
+    if num % 2 == 0:
+        print(num)
+문제 4
+
+평균보다 큰 수만 출력
+
+numbers = [70, 80, 90, 100]
+
+avg = sum(numbers) / len(numbers)
+
+for num in numbers:
+    if num > avg:
+        print(num)
+핵심 요약 (시험 대비)
+[] : 리스트 생성
+append() : 데이터 추가
+len() : 개수
+sum() : 합계
+max() : 최댓값
+min() : 최솟값
+sort() : 오름차순 정렬
+sort(reverse=True) : 내림차순 정렬
+for문과 함께 사용하면 리스트의 모든 데이터를 처리할 수 있다.
+인덱스는 0부터 시작하며, [-1]은 마지막 요소를 의미한다.
+
+이 정도 내용을 익히면 현재 배우는 리스트 기초는 충분히 이해한 것이고, 다음 단계인 조건문(if) 과 반복문(for, while) 을 이용한 응용 문제도 수월하게 풀 수 있다.
